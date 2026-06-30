@@ -1,0 +1,11 @@
+.status-badge-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.status-badge__icon {
+  font-size: 0.85em;
+  line-height: 1;
+}

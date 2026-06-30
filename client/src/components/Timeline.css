@@ -1,0 +1,120 @@
+.timeline {
+  padding: var(--space-4) 0;
+  overflow-x: auto;
+}
+
+.timeline__track {
+  display: flex;
+  align-items: flex-start;
+  min-width: 560px;
+  position: relative;
+}
+
+.timeline__stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Connector line */
+.timeline__connector {
+  position: absolute;
+  top: 18px;
+  right: 50%;
+  width: 100%;
+  height: 3px;
+  background: var(--color-border);
+  z-index: 0;
+}
+
+.timeline__connector--done {
+  background: var(--color-primary);
+}
+
+/* Circle */
+.timeline__circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition: all var(--transition-base);
+}
+
+.timeline__circle--done {
+  background: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 2px 8px rgba(59, 91, 219, 0.3);
+}
+
+.timeline__circle--current {
+  background: var(--color-primary);
+  color: var(--color-white);
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 4px var(--color-primary-100), 0 4px 12px rgba(59, 91, 219, 0.3);
+}
+
+.timeline__circle--future {
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.timeline__circle-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* Info */
+.timeline__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--space-2);
+  text-align: center;
+}
+
+.timeline__label {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-dark);
+  max-width: 90px;
+}
+
+.timeline__label--current {
+  color: var(--color-primary);
+  font-weight: var(--fw-bold);
+}
+
+.timeline__label--future {
+  color: var(--color-text-muted);
+  font-weight: var(--fw-medium);
+}
+
+.timeline__date {
+  font-size: var(--fs-xs);
+  color: var(--color-text-light);
+  margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .timeline__track {
+    min-width: 480px;
+  }
+  
+  .timeline__circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .timeline__circle--current {
+    width: 38px;
+    height: 38px;
+  }
+}

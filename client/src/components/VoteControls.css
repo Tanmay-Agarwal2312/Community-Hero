@@ -1,0 +1,95 @@
+.vote-controls {
+  padding: var(--space-4) var(--space-5);
+}
+
+.vote-controls__header {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-medium);
+  text-align: center;
+  margin-bottom: var(--space-3);
+}
+
+.vote-controls__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-5);
+}
+
+.vote-controls__btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  cursor: pointer;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-medium);
+  transition: all var(--transition-fast);
+}
+
+.vote-controls__btn:hover:not(:disabled) {
+  border-color: var(--color-text-muted);
+}
+
+.vote-controls__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.vote-controls__btn--up:hover:not(:disabled) {
+  color: var(--color-resolved);
+  border-color: var(--color-resolved);
+  background: var(--color-resolved-bg);
+}
+
+.vote-controls__btn--active-up {
+  color: var(--color-resolved) !important;
+  border-color: var(--color-resolved) !important;
+  background: var(--color-resolved-bg) !important;
+}
+
+.vote-controls__btn--down:hover:not(:disabled) {
+  color: var(--color-disputed);
+  border-color: var(--color-disputed);
+  background: var(--color-disputed-bg);
+}
+
+.vote-controls__btn--active-down {
+  color: var(--color-disputed) !important;
+  border-color: var(--color-disputed) !important;
+  background: var(--color-disputed-bg) !important;
+}
+
+.vote-controls__net {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+}
+
+.vote-controls__net-value {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-dark);
+}
+
+.vote-controls__net-value--positive {
+  color: var(--color-resolved);
+}
+
+.vote-controls__net-value--negative {
+  color: var(--color-disputed);
+}
+
+.vote-controls__hint {
+  text-align: center;
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+}
